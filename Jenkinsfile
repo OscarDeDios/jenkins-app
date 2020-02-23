@@ -10,12 +10,15 @@ pipeline {
     stage('Test') {
       steps {
         echo 'TEST'
+        sh '/bin/nz -vz localhost 22'
+        sh '/bin/nz -vz localhost 80'
       }
     }
 
-    stage('Deploy') {
+    stage('Push Registry') {
       steps {
-        echo 'DEPLOY 2'
+        echo 'docker tag app:test app:stable'
+        echo 'docker push app:test app:stable'
       }
     }
 
