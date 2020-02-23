@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Hola desde stage inicio'
         echo 'Segundo hola'
+        echo 'Probando modificación'
       }
     }
 
