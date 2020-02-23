@@ -10,8 +10,8 @@ pipeline {
     stage('Test') {
       steps {
         echo 'TEST'
-        sh 'docker run --rm --name app -id -p 80:80 app:test'
-        sh '/bin/nc -vz localhost 80'
+        sh 'docker run --rm --name app -id -p 60:60 app:test'
+        sh '/bin/nc -vz localhost 60'
       }
       post {
         always {
